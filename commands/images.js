@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 // import url from 'url';
 
 export async function img(msg, args) {
-    let url = `https://api.unsplash.com/photos/?client_id=${process.env.UNSPLASH}`;
+    let url = `https://api.unsplash.com/photos/?client_id=${secrets.UNSPLASH}`;
     let response = await fetch(url);
     let json = await response.json();
     const index = Math.floor(Math.random() * Object.keys(json).length);
